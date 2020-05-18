@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title>Resources</title>
+        <link th:href="@{/css/resources.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div class="resourceContainer" th:each="resource : ${resources}">
+                <div class="resourceHeader">
+                    <span th:text="${resource.id}"></span>
+                </div>
+                <div class="resourceEditContainer">
+                    <form th:action="@{/admin/resources/{resourceId}/re-upload(resourceId=${resource.id})}" method="get">
+                        <button class="resourceEdit" type="submit">Re-upload</button>
+                    </form>
+                    <form th:action="@{/admin/resources/{resourceId}/delete(resourceId=${resource.id})}" method="post">
+                        <button class="resourceEdit" type="submit">Delete</button>
+                    </form>
+                </div>
+                <div class="resourceItemContainer" th:each="resourceItem : ${resource.items}">
+                    <a class="resourceItem" th:href="@{'~/' + ${resourceItem}}" th:text="'/' + ${resourceItem}"></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

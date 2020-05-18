@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title>Sean Maltby</title>
+        <link th:href="@{/css/post-summaries.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <p>
+                Hello, and welcome to my website. Included here are some of the personal projects I've worked on.
+                At the top of the page are links to my GitHub and LinkedIn respectively.
+                The source code for all of my projects, including this website, are available on that GitHub.
+                I can be contacted via email at seanmaltby(at)gmail(dot)com.
+                Thanks for stopping by.
+            </p>
+            <h1>Recent Posts</h1>
+            <div th:replace="fragments/post-summaries :: post-summaries"></div>
+            <a th:href="@{/posts}">>> See All</a>
+        </div>
+    </body>
+</html>

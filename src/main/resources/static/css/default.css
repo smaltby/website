@@ -1,0 +1,50 @@
+html {
+    background-color: #fafafa;
+}
+
+body {
+    color: #232323;
+    font-family: sans-serif;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 80px auto auto;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+p {
+    line-height: 1.75;
+}
+
+a {
+    color: #0087be;
+    outline-color: #232323;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e6e6e6;
+}
+
+svg:hover {
+    fill: #e6e6e6;
+}
+
+button {
+    background: #ffffff;
+    border: 1px solid #d1d5da;
+    padding: 8px 12px;
+}
+
+button:hover {
+    box-shadow: 0 0 0 4px rgba(3, 102, 214, 0.3);
+}
+
+iframe {
+    margin: 0 100px;
+    width: calc(100% - 200px);
+    height: 300px;
+}

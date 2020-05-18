@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title>404</title>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <p>The page you are trying to reach doesn't exist.</p>
+            <a th:href="@{/}">>> Return home.</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title>New Post</title>
+        <script th:src="@{/js/new-post.js}"></script>
+        <link th:href="@{/css/new-post.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1>Post editor</h1>
+            <form th:action="@{/admin/save-post}" th:object="${post}" method="post">
+                <input id="newPostTitle" type="text" th:field="${post.title}" aria-label="Title" placeholder="Title">
+                <div id="tabContainer">
+                    <nav id="tab">
+                        <input id="write" name="writePreview" type="radio" checked>
+                        <label for="write">Write</label>
+                        <input id="preview" name="writePreview" type="radio">
+                        <label for="preview">Preview</label>
+                    </nav>
+                </div>
+                <textarea id="newPostTextArea" th:field="${post.content}" aria-label="Content"></textarea>
+                <div id="newPostPreview"></div>
+                <input type="hidden" th:field="${post.id}">
+                <div id="submitContainer">
+                    <button type="submit">Save Post</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title>Posts</title>
+        <link th:href="@{/css/post-summaries.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div th:replace="fragments/post-summaries :: post-summaries"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <div th:fragment="post-summaries" class="postSummary" th:each="post : ${postSummaries}">
+            <div class="postSummaryTitle">
+                <a class="postSummaryLink" th:href="@{/posts/{postId}(postId=${post.id})}" th:text="${post.title}"></a>
+            </div>
+            <div class="postSummarySubtitle">
+                <time class="postSummaryDate" th:datetime="${post.createdAt}" th:text="${post.createdAt}"></time>
+            </div>
+        </div>
+    </body>
+</html>

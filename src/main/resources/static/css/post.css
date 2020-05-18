@@ -1,0 +1,16 @@
+#postTitleContainer {
+    margin-bottom: 20px;
+}
+
+.postSubtitle {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.postEditContainer {
+    display: flex;
+}
+
+.postEdit {
+    margin-right: 10px;
+}

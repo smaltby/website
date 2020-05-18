@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layouts/default}">
+    <head>
+        <title th:text="${post.title}"></title>
+        <link th:href="@{/css/post.css}" rel="stylesheet">
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <div id="postTitleContainer">
+                <h1 id="postTitle" th:text="${post.title}"></h1>
+                <div class="postSubtitle">
+                    <time class="postSummaryDate" th:datetime="${post.createdAt}" th:text="${post.createdAt}"></time>
+                </div>
+            </div>
+            <div class="postEditContainer" th:if="${#authentication?.getName() == 'admin'}">
+                <form th:action="@{/admin/posts/{postId}/edit(postId=${post.id})}" method="get">
+                    <button class="postEdit" type="submit">Edit</button>
+                </form>
+                <form th:action="@{/admin/posts/{postId}/delete(postId=${post.id})}" method="post">
+                    <button class="postEdit" type="submit">Delete</button>
+                </form>
+            </div>
+            <div id="postContent" th:utext="${post.content}"></div>
+        </div>
+    </body>
+</html>

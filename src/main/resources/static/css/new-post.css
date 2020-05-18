@@ -1,0 +1,59 @@
+#tabContainer {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px #c4c4c4 solid;
+}
+
+#newPostTitle {
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+}
+
+#newPostTitle:focus {
+    box-shadow: 0 0 0 4px rgba(3, 102, 214, 0.3);
+}
+
+/* Style label to look like a button */
+#tab label {
+    background: #ffffff;
+    border: 1px solid #d1d5da;
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+/* Hide the radio button, so that the inputs act like radios but look like buttons from the label styling */
+#tab input {
+    display: none;
+}
+
+#tab input:checked + label {
+    background: #9c9c9c;
+}
+
+#newPostTextArea {
+    border: 1px solid #d1d5da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 400px;
+    width: 100%;
+    padding: 8px;
+}
+
+#newPostTextArea:focus {
+    box-shadow: 0 0 0 4px rgba(3, 102, 214, 0.3);
+}
+
+#newPostPreview {
+    display: none;
+}
+
+#submitContainer {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px #c4c4c4 solid;
+}

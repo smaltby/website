@@ -1,0 +1,34 @@
+.headerContainer {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#titleContainer {
+    margin-bottom: 10px;
+}
+
+#title {
+    font-size: 36px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#navBar ul {
+    margin: 0;
+    padding: 0;
+}
+
+#navBar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.navLink {
+    color: #232323;
+    font-weight: 800;
+}
+
+.navText {
+    font-size: 16px;
+}

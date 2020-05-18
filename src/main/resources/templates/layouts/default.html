@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        lang="en">
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/img/favicon.ico}"/>
+        <link th:href="@{/css/default.css}" rel="stylesheet">
+        <link th:href="@{/css/header.css}" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="description" content="Sean Maltby's personal website">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <div th:replace="fragments/header :: header"></div>
+        </header>
+        <div layout:fragment="content"></div>
+    </body>
+</html>

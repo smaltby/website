@@ -1,0 +1,19 @@
+.resourceHeader {
+    margin-bottom: 5px;
+}
+
+.resourceEditContainer {
+    display: flex;
+}
+
+.resourceEdit {
+    margin-right: 10px;
+}
+
+.resourceContainer {
+    margin-bottom: 30px;
+}
+
+.resourceItem {
+    font-size: 12px;
+}
